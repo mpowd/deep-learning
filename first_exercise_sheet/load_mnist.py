@@ -21,7 +21,7 @@ def read(digits, path = "."):
     returns the 28 x 28 input images as rows of the int32 data matrix X with format n x 728 
     and the labels as n-vector of integers as class labels (n = 50.000 for training,
     n = 10.000 for validation and testing). X0,y0 ist the training, Xv, vy the validation
-    and X1, y1 the test set.
+    and X1, y1 the cl_cnn_faces_nolsg.ipynb set.
     
     Parameters:
     
@@ -70,7 +70,7 @@ def read(digits, path = "."):
     y0 = labels[:50000]
     yv = labels[50000:]
     
-    # file name of test image  and label file    
+    # file name of cl_cnn_faces_nolsg.ipynb image  and label file
     fname_img = os.path.join(path, 't10k-images-idx3-ubyte')
     fname_lbl = os.path.join(path, 't10k-labels-idx1-ubyte')
     
@@ -157,7 +157,7 @@ def loader():
         with open(PATH + FILE_TEST , 'wb') as outfile:
             outfile.write(decompressed_file.read())
         
-        # test labels
+        # cl_cnn_faces_nolsg.ipynb labels
         response = urllib.request.urlopen(MNIST_URL + FILE_TEST_Y + ".gz")
         compressed_file = io.BytesIO(response.read())
         decompressed_file = gzip.GzipFile(fileobj=compressed_file)
@@ -188,7 +188,7 @@ def read(digits, path="."):
     returns the 28 x 28 input images as rows of the int32 data matrix X with format n x 728
     and the labels as n-vector of integers as class labels (n = 50.000 for training,
     n = 10.000 for validation and testing). X0,y0 ist the training, Xv, vy the validation
-    and X1, y1 the test set.
+    and X1, y1 the cl_cnn_faces_nolsg.ipynb set.
 
     Parameters:
 
@@ -237,7 +237,7 @@ def read(digits, path="."):
     y0 = labels[:50000]
     yv = labels[50000:]
 
-    # file name of test image  and label file
+    # file name of cl_cnn_faces_nolsg.ipynb image  and label file
     fname_img = os.path.join(path, 't10k-images-idx3-ubyte')
     fname_lbl = os.path.join(path, 't10k-labels-idx1-ubyte')
 
@@ -323,7 +323,7 @@ def loader():
         with open(PATH + FILE_TEST, 'wb') as outfile:
             outfile.write(decompressed_file.read())
 
-        # test labels
+        # cl_cnn_faces_nolsg.ipynb labels
         response = urllib.request.urlopen(MNIST_URL + FILE_TEST_Y + ".gz")
         compressed_file = io.BytesIO(response.read())
         decompressed_file = gzip.GzipFile(fileobj=compressed_file)
